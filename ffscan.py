@@ -24,8 +24,10 @@ def main
 		except:
 			print "The directory was not found. "
 			
-print "%s Current directory for file access and modification is " % (dirwalk())
-accessNMod(dirwalk())				
+FullFilePaths = get_fullpaths(directory)
+
+print "%s Current directory for file access and modification is " % (FullFilePaths)
+accessNMod(FullFilePaths):				
 	
 def dirwalk(top):
 	for root, folders, files in walk(top, topdown = true, oneerror=walkerror):
@@ -36,23 +38,31 @@ def walkerror(oserror):
 	sys.stderr.write('\n')
 	return 0
 	
-def accessNMod(st):
-ctime,atime,mtime = st 
+def accessNMod(st, directory):
+ctime,atime,mtime = st
+
+FullFilePaths = get_fullpaths(directory)
+
+while (FullFilePaths = true)
 
 	print "Created: ", time.ctime(ctime)
 	print "Last accessed: ", time.ctime(atime)
 	print "Last modified: ", time.ctime(mtime)
 
-st = os.stat(dirwalk())
+st = os.stat(())
 
-def get_filepath(directory):
+def get_fullpath(directory):
 filePaths = [] 
+folderPaths = []
 
-for root, directories, files in scandir.walk(directory):
+for root, dir, files in dirwalk(directory):
 	for filename in files:
 		filepath = os.path.join(root, filename)
 		filePaths.append(filepath)
-FullFilePaths = get_filepaths()	
-
+			
+	for folders in dir:
+		folderpath = os.path.join(root, folders)
+		folderPaths.append(folderpaths)
+		
 sys.exit(main())
 	
