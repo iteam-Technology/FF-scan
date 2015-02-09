@@ -1,0 +1,19 @@
+int main() {
+
+double a,total,seconds,minutes;
+double MB = .005; //transfer rate is in Megabytes
+              
+while(a = true){
+  cin >> a;     // Specify how big the data size is
+  seconds = (a / MB ); // convert to seconds
+  minutes = seconds / 60; // convert to minutes
+  total = minutes / 60; // convert to hours
+               
+    if(a <= 1)   //used because of the while loop is specified to true, a way to get rid of those extra 1's
+      return 0;  //that gets printed 
+               
+  cout << a << " is original backup size " << " and it would take " << total << " hours to backup" << endl;
+  }
+ 
+return 0;
+}
