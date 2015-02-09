@@ -56,14 +56,13 @@ ctime,atime,mtime = st
 
 FullFilePaths = get_fullpaths(directory)
 
+
 while (FullFilePaths = true)
+st = os.stat(FullFilePaths)
+
 	print "Created: ", time.ctime(ctime)
 	print "Last accessed: ", time.ctime(atime)
 	print "Last modified: ", time.ctime(mtime)
 
-st = os.stat(FullFilePaths)
-
-
-		
 sys.exit(main())
 	
