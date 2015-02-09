@@ -47,11 +47,11 @@ ctime,atime,mtime = st
 
 		for root, dir, files in dirwalk(directory):
 			for filename in files:
-				filepath = os.path.join(root, filename)
+				filepath = os.path.join(dirpath, filename)
 				filePaths.append(filepath)
 			
 			for folders in dir:
-				folderpath = os.path.join(root, folders)
+				folderpath = os.path.join(dirpath, folders)
 				folderPaths.append(folderpaths)
 
 FullFilePaths = get_fullpaths(directory)
