@@ -24,6 +24,8 @@ def main
 		except:
 			print "The directory was not found. "
 			
+print "%s Current directory for file access and modification is " % (dirwalk())
+accessNMod(dirwalk())				
 	
 def dirwalk(top):
 	for root, folders, files in walk(top, topdown = true, oneerror=walkerror):
@@ -42,9 +44,6 @@ ctime,atime,mtime = st
 	print "Last modified: ", time.ctime(mtime)
 
 st = os.stat(dirwalk())
-
-print "%s Current directory for file access and modification is " % (dirwalk())
-accessNMod(dirwalk())	
 
 sys.exit(main())
 	
