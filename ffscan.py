@@ -40,29 +40,30 @@ def walkerror(oserror):
 	
 def accessNMod(st, directory):
 ctime,atime,mtime = st
+	
+	def get_fullpath(directory):
+		filePaths = [] 
+		folderPaths = []
+
+		for root, dir, files in dirwalk(directory):
+			for filename in files:
+				filepath = os.path.join(root, filename)
+				filePaths.append(filepath)
+			
+			for folders in dir:
+				folderpath = os.path.join(root, folders)
+				folderPaths.append(folderpaths)
 
 FullFilePaths = get_fullpaths(directory)
 
 while (FullFilePaths = true)
-
 	print "Created: ", time.ctime(ctime)
 	print "Last accessed: ", time.ctime(atime)
 	print "Last modified: ", time.ctime(mtime)
 
-st = os.stat(())
+st = os.stat(FullFilePaths)
 
-def get_fullpath(directory):
-filePaths = [] 
-folderPaths = []
 
-for root, dir, files in dirwalk(directory):
-	for filename in files:
-		filepath = os.path.join(root, filename)
-		filePaths.append(filepath)
-			
-	for folders in dir:
-		folderpath = os.path.join(root, folders)
-		folderPaths.append(folderpaths)
 		
 sys.exit(main())
 	
