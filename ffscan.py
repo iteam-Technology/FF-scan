@@ -45,5 +45,14 @@ ctime,atime,mtime = st
 
 st = os.stat(dirwalk())
 
+def get_filepath(directory):
+filePaths = [] 
+
+for root, directories, files in scandir.walk(directory):
+	for filename in files:
+		filepath = os.path.join(root, filename)
+		filePaths.append(filepath)
+FullFilePaths = get_filepaths()	
+
 sys.exit(main())
 	
