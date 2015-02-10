@@ -22,7 +22,7 @@ def main
 			except:
 				print "The directory was not found. "
 				
-FullFilePaths = get_fullpaths(directory)
+	FullFilePaths = get_fullpaths(directory)
 
 	print "%s Current directory for file access and modification is " % (FullFilePaths)
 	accessNMod(FullFilePaths):
