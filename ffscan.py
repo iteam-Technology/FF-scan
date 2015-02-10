@@ -24,7 +24,7 @@ def main
 				
 	FullFilePaths = get_fullpaths(directory)
 
-	print "%s Current directory for file access and modification is " % (FullFilePaths)
+	print "%s Current directory for file access and modification is " % (currdir)
 	accessNMod(FullFilePaths):
 		
 def dirwalk(top):
